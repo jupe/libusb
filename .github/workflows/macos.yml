@@ -34,3 +34,10 @@ jobs:
       - name: Xcode
         shell: bash
         run: cd Xcode && xcodebuild -project libusb.xcodeproj
+
+      - name: store to artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: libusb.macos.lib
+          path: build/libusb.lib
+          if-no-files-found: error
