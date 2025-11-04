@@ -38,6 +38,6 @@ jobs:
       - name: store to artifacts
         uses: actions/upload-artifact@v5
         with:
-          name: libusb.macos.lib
-          path: build/libusb.lib
+          name: libusb-1.0.0-macos.dylib
+          path: Xcode/build/Release/libusb-1.0.0.dylib
           if-no-files-found: error
